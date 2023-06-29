@@ -1,0 +1,422 @@
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    background-color: #f6edd9;
+}
+section,footer {
+    padding: 54px 0;
+}
+h3{
+    font-size: 50px;
+}
+p{
+    color: #0000009c;
+}
+.container{
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+.btn2{
+    background-color: rgba(40, 47, 109, 0.75);
+    color: #b85b2d;
+    padding: 7px 35px;
+    border-radius: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.btn{
+    align-items: center;
+    background-color: rgba(40, 47, 109, 0.62);
+    color: rgb(247, 244, 244);
+    padding: 15px 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+.btn:hover,.btn2:hover{
+    background-color: rgb(2, 2, 87);
+}
+.btn.animate-btn{
+    animation: animate-outline 1.5s ease-out infinite;
+}
+.btn.animate-btn2{
+    margin-top: 25px;
+    animation: animate-outline 1.5s ease-out infinite;
+}
+@keyframes animate-outline{
+    from{
+        outline: 0px solid #4f9bf98a;
+    }
+    to{
+        outline: 10px solid #4f9bf900;
+    }
+}
+/*.btn2.animate-btn2{
+    animation: animate-outline 1.5s ease-out infinite;;
+}*/ /* Animação */
+header{
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+}
+nav ul a{
+    color: #b85b2d;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+}
+nav ul a:not(.btn2):after{
+    content: "";
+    background-color: #b85b2d;
+    height: 3px;
+    width: 0%;
+    display: block;
+    transition: 0.3s;
+    margin: 0 auto;
+
+}
+nav ul a:hover::after{
+    width: 100%;
+}
+/* menu mobile*/
+nav .menu-icon{
+    cursor: pointer;
+    font-size: 25px;
+    color: white;
+    display: none;
+}
+nav .close-icon{
+    display: none;
+    font-size: 30px;
+    color: white;
+}
+.banner{
+    display: flex;
+    justify-content: flex-start;
+}
+.banner .banner-text{
+    margin: 150px;
+    align-items: flex-start;
+    padding: 0 4px;
+}
+.banner .banner-text h1{
+    font-size: 60px;
+    color: #522915;
+}
+.banner .banner-text p{
+    font-size: 22px;
+    color: black;
+    font-weight: lighter;
+    margin: 18px 0;
+}
+/*faca mais*/
+.faca-mais .container{
+    display: flex;
+    align-items: center;
+}
+.faca-mais .faca-mais-text{
+    width: 50%;
+    padding: 0 40px;
+}
+.faca-mais .faca-mais-text h3{
+    font-size: 56px;
+    color: #b85b2d;
+}
+.faca-mais .faca-mais-text p{
+    margin: 5px 0 10px 0;
+}
+.faca-mais .faca-mais-img{
+    width: 50%;
+}
+.faca-mais .faca-mais-img img{
+    width: 100%;
+}
+.depoimentos h3{
+    text-align: center;
+    color: #b85b2d;
+}
+.depoimentos p{
+    margin-bottom: 21px;
+    text-align: center;
+}
+.cards{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap
+}
+.depoimentos .card-item{
+    background-color: #d3e6fd;
+    margin: 15px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    transition: 0.32s;
+}
+.depoimentos .card-item img{
+    border-radius: 100%;
+    width: 80px;
+    display: block;
+    margin: 10px auto;
+}
+.depoimentos .card-item .nome-user{
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.depoimentos .card-item .depoimentos-user{
+    color: black;
+    font-size: 20px;
+    padding: 0 18px;
+}
+.depoimentos .card-item .estrelas{
+    margin: 15px 0;
+    border-top: 2px solid #71767a23;
+}
+.depoimentos .card-item .estrelas i{
+    color: #4f9cf9;
+    margin-top: 15px;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.depoimentos .card-item:hover{
+    background-color: #4f9bf98a;
+    margin-top: -5px;
+}
+.depoimentos .card-item:hover .nome-user,
+.depoimentos .card-item:hover .estrelas i{
+    color: white;
+}
+/* footer*/
+.footer{
+    height: 100%;
+    width: 100%;
+    background-color: #4f9cf9;
+    text-align: center;
+}
+.footer i{
+    color: black;
+    font-size: 19px;
+    background-color: white;
+    padding: 8px;
+    margin: 3px;
+    border-radius: 10px;
+}
+.footer p{
+    margin-top: 10px;
+    color: white;
+}
+/* Página sobre*/
+.sobre .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sobre .sobre-text{
+    width: 50%;
+    padding-right: 40px;
+}
+.sobre .sobre-text h3{
+    color: #b85b2d;
+}
+.sobre .sobre-text p{
+    margin: 18px 0;
+    color: #000000a6;
+}
+.sobre .sobre-img{
+    width: 50%;
+}
+.sobre .sobre-img img{
+    width: 80%;
+    border-radius: 15px;
+}
+/*end página sobre*/
+/* Página contato */
+.contato .mapa h3{
+    text-align: center;
+    margin: 1px 0 30px 0;
+    color: #b85b2d;
+}
+.contato-info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.contato-info .right-side{
+    width: 50%;
+    padding: 30px;
+    background-color: #4f9cf9;
+    border-radius: 14px;
+    margin-right: 50px;
+    height: fit-content;
+}
+.contato-info .right-side div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.contato-info .right-side div i{
+    font-size: 24px;
+    margin-right: 20px;
+    color: white;
+}
+.contato-info .right-side p{
+    font-size: 17px;
+    color: white;
+}
+.contato-info .left-side{
+    width: 45%;
+}
+.contato-info .left-side input{
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    height: 47px;
+    padding: 15px;
+    border-radius: 9px;
+    transition: 0.3s;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    font-weight: lighter;
+}
+
+.contato-info .left-side input:focus,
+.contato-info .left-side textarea:focus{
+    border-color: #4f9cf9;
+}
+
+.contato-info .left-side textarea{
+    width: 554px;
+    border: 1px solid #f1f1f1;
+    color: #212121;
+    border-radius: 9px;
+    margin-bottom: 10px;
+    padding: 15px;
+    transition: 0.3s;
+    resize: none;
+}
+.contato-info .left-side button{
+    border: none;
+}
+.btn-ctt{
+    align-items: center;
+    background-color: #4f9cf9;
+    color: rgb(247, 244, 244);
+    padding: 15px 50px;
+    border-radius: 40px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s;
+}
+@media(max-width: 830px){
+    /* menu mobile */
+    ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #4f9bf9e0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        clip-path: circle(0.4% at 100% 0);
+        transition: 0.7s;
+    }
+    .ul.open{
+        clip-path: circle(141.4% at 100% 0);
+    }
+    .ul a{
+        margin: 10px 0;
+        font-size: 16px;
+    }
+    nav .menu-icon{
+        display: block;
+    }
+    nav .close-icon{
+        display: block;
+        position: absolute;
+        top: 46px;
+        right: 28px;
+    }
+    /* Pagina responsivo */
+    .faca-mais .faca-mais-text{
+        margin-top: 10px;
+        padding: 0 20px;
+        order: 1;
+    }
+    .faca-mais .container{
+        flex-direction: column;
+    }
+    .faca-mais .faca-mais-text h3{
+        font-size: 48px;
+    }
+    .faca-mais .faca-mais-text,
+    .faca-mais .faca-mais-img{
+        width: 100%;
+    }
+    /* banner responsivo */
+    .banner .banner-text{
+        padding: 0;
+        margin: 80px;
+    }
+    .banner .banner-text h1{
+        font-size: 80px;
+    }
+    .banner .banner-text p{
+        font-size: 15px;
+    }
+    .depoimentos .card-item{
+        width: 100%;
+    }
+    /* pagina sobre responsivo */
+    .sobre .container{
+        flex-direction: column;
+    }
+    .sobre .sobre-img,
+    .sobre .sobre-text{
+        width: 100%;
+    }
+    .sobre .sobre-text{
+        margin-top: 40px;
+    }
+    /* pagina contato responsivo */
+    .contato .contato-info{
+        flex-direction: column;
+    }
+    .contato-info .left-side,
+    .contato-info .right-side{
+        width: 100%;
+    }
+    .contato-info .left-side{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:500px){
+    .banner .banner-text h1{
+        font-size: 30px;
+    }
+    .faca-mais .faca-mais-text h3{
+        font-size: 40px;
+    }
+}
